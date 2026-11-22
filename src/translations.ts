@@ -10,7 +10,6 @@ export interface Translation {
   contact: string;
   ourStory: string;
   retailer: string;
-  footerNavLabel: string;
   contactEyebrow: string;
   contactTitle: string;
   contactDescription: string;
@@ -115,6 +114,8 @@ export interface Translation {
   visionDescription: string;
   missionTitle: string;
   missionDescription: string;
+  aboutLink: string;
+  backToCollection: string;
   switchToAmharic: string;
   switchToEnglish: string;
 }
@@ -130,8 +131,7 @@ export const translations: Record<Language, Translation> = {
     collection: "Collection",
     contact: "Contact",
     ourStory: "Our story",
-    retailer: "Find us",
-    footerNavLabel: "Footer navigation",
+    retailer: "Location",
     contactEyebrow: "Let’s connect",
     contactTitle: "Contact",
     contactDescription:
@@ -293,7 +293,7 @@ export const translations: Record<Language, Translation> = {
     previousProducts: "Previous products",
     nextProducts: "Next products",
     showProduct: "Show product",
-    storyEyebrow: "Our story",
+    storyEyebrow: "Radical P.L.C. | Our story",
     storyTitleFirst: "Affordable Quality.",
     storyTitleSecond: "Local Strength.",
     storyIntroduction:
@@ -312,6 +312,8 @@ export const translations: Record<Language, Translation> = {
     missionTitle: "Our mission",
     missionDescription:
       "To deliver affordable, high-quality stationery solutions with integrity, innovation, and local impact at the core.",
+    aboutLink: "About us ↗",
+    backToCollection: "Back to collection ↑",
     switchToAmharic: "Switch to Amharic",
     switchToEnglish: "Switch to English",
   },
@@ -325,8 +327,7 @@ export const translations: Record<Language, Translation> = {
     collection: "ስብስብ",
     contact: "ያግኙን",
     ourStory: "ስለ እኛ",
-    retailer: "እዚህ ያግኙን",
-    footerNavLabel: "የግርጌ ማውጫ",
+    retailer: "ቦታ",
     contactEyebrow: "እንገናኝ",
     contactTitle: "ያግኙን",
     contactDescription:
@@ -487,7 +488,7 @@ export const translations: Record<Language, Translation> = {
     previousProducts: "ያለፉት ምርቶች",
     nextProducts: "ቀጣይ ምርቶች",
     showProduct: "ምርቱን አሳይ",
-    storyEyebrow: "ስለ እኛ",
+    storyEyebrow: "Radical P.L.C. | ስለ እኛ",
     storyTitleFirst: "ተመጣጣኝ ጥራት።",
     storyTitleSecond: "አካባቢያዊ ጥንካሬ።",
     storyIntroduction:
@@ -506,6 +507,8 @@ export const translations: Record<Language, Translation> = {
     missionTitle: "ተልዕኮአችን",
     missionDescription:
       "ተመጣጣኝ ዋጋ ያላቸውን ከፍተኛ ጥራት ያላቸውን የጽሕፈት መሣሪያ መፍትሄዎች በታማኝነት፣ በፈጠራ እና በአካባቢያዊ ተፅዕኖ መሠረት ማቅረብ።",
+    aboutLink: "ስለ እኛ ↗",
+    backToCollection: "ወደ ስብስቡ ተመለስ ↑",
     switchToAmharic: "ወደ አማርኛ ቀይር",
     switchToEnglish: "ወደ እንግሊዝኛ ቀይር",
   },

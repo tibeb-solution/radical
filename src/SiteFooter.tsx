@@ -19,7 +19,7 @@ export default function SiteFooter({ language }: SiteFooterProps) {
           <p>{copy.footerPromise}</p>
         </div>
 
-        <nav className="site-footer-nav" aria-label={copy.footerNavLabel}>
+        <nav className="site-footer-nav" aria-label={copy.navLabel}>
           <a href="/#collection">{copy.home}</a>
           <a href="/products">{copy.collection}</a>
           <a href="/contact">{copy.contact}</a>
