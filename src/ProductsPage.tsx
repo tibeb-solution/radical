@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import radicalLogo from "../assets/radical-logo.png";
-import radicalExerciseBook from "../assets/radical-pp-exercise-book-cutout.png";
-import tripleAPaper from "../assets/triple-a-a4-paper-cutout.png";
-import classicTripleAExerciseBook from "../assets/classic-triple-a-exercise-book-cutout.png";
-import radicalIPen from "../assets/radical-i-pen-cutout.png";
-import radicalOnePlus from "../assets/radical-one-plus-cutout.png";
-import radicalTape from "../assets/radical-tape-cutout.png";
-import qualityRedPaper from "../assets/quality-red-paper-cutout.png";
+import radicalLogo from "../assets/radical-logo.webp";
+import radicalExerciseBook from "../assets/radical-pp-exercise-book-cutout.webp";
+import tripleAPaper from "../assets/triple-a-a4-paper-cutout.webp";
+import classicTripleAExerciseBook from "../assets/classic-triple-a-exercise-book-cutout.webp";
+import radicalIPen from "../assets/radical-i-pen-cutout.webp";
+import radicalOnePlus from "../assets/radical-one-plus-cutout.webp";
+import radicalTape from "../assets/radical-tape-cutout.webp";
+import qualityRedPaper from "../assets/quality-red-paper-cutout.webp";
 import { translations, type Language } from "./translations";
 
 interface ProductsPageProps {
@@ -100,7 +100,7 @@ export default function ProductsPage({ language, onToggleLanguage }: ProductsPag
     <main className="products-page" id="products">
       <header className="products-header">
         <a className="products-brand" href="/#collection" aria-label={copy.brandHome}>
-          <img src={radicalLogo} alt="" />
+          <img src={radicalLogo} alt="" decoding="async" />
         </a>
         <nav className="products-nav" aria-label={copy.navLabel}>
           <a href="/#collection">{copy.home}</a>
@@ -146,7 +146,12 @@ export default function ProductsPage({ language, onToggleLanguage }: ProductsPag
                 <div className={`product-card-art${product.image ? " has-image" : ""}`}>
                   <span className="product-card-badge">{product.badge}</span>
                   {product.image ? (
-                    <img src={product.image} alt={product.imageAlt} />
+                    <img
+                      src={product.image}
+                      alt={product.imageAlt}
+                      loading={activeProduct === product.index ? "eager" : "lazy"}
+                      decoding="async"
+                    />
                   ) : (
                     <span className="product-placeholder" aria-hidden="true">
                       {product.placeholder}
@@ -186,7 +191,12 @@ export default function ProductsPage({ language, onToggleLanguage }: ProductsPag
         {activeProduct === 0 && (
           <section className="product-detail-panel" aria-labelledby="radical-exercise-books-title">
             <div className="product-detail-image">
-              <img src={radicalExerciseBook} alt={copy.radicalExerciseBooksImageAlt} />
+              <img
+                src={radicalExerciseBook}
+                alt={copy.radicalExerciseBooksImageAlt}
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div className="product-detail-content">
               <header>
@@ -219,7 +229,7 @@ export default function ProductsPage({ language, onToggleLanguage }: ProductsPag
         {activeProduct === 1 && (
           <section className="product-detail-panel" aria-labelledby="triple-a-title">
             <div className="product-detail-image">
-              <img src={tripleAPaper} alt={copy.tripleAImageAlt} />
+              <img src={tripleAPaper} alt={copy.tripleAImageAlt} loading="lazy" decoding="async" />
             </div>
             <div className="product-detail-content">
               <header>
@@ -253,7 +263,12 @@ export default function ProductsPage({ language, onToggleLanguage }: ProductsPag
         {activeProduct === 2 && (
           <section className="product-detail-panel" aria-labelledby="classic-triple-a-title">
             <div className="product-detail-image">
-              <img src={classicTripleAExerciseBook} alt={copy.classicTripleAExerciseBookImageAlt} />
+              <img
+                src={classicTripleAExerciseBook}
+                alt={copy.classicTripleAExerciseBookImageAlt}
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div className="product-detail-content">
               <header>
@@ -286,7 +301,7 @@ export default function ProductsPage({ language, onToggleLanguage }: ProductsPag
         {activeProduct === 3 && (
           <section className="product-detail-panel" aria-labelledby="radical-ipen-title">
             <div className="product-detail-image">
-              <img src={radicalIPen} alt={copy.radicalIPenImageAlt} />
+              <img src={radicalIPen} alt={copy.radicalIPenImageAlt} loading="lazy" decoding="async" />
             </div>
             <div className="product-detail-content">
               <header>
@@ -319,7 +334,7 @@ export default function ProductsPage({ language, onToggleLanguage }: ProductsPag
         {activeProduct === 4 && (
           <section className="product-detail-panel" aria-labelledby="radical-one-plus-title">
             <div className="product-detail-image">
-              <img src={radicalOnePlus} alt={copy.radicalOnePlusImageAlt} />
+              <img src={radicalOnePlus} alt={copy.radicalOnePlusImageAlt} loading="lazy" decoding="async" />
             </div>
             <div className="product-detail-content">
               <header>
@@ -352,7 +367,12 @@ export default function ProductsPage({ language, onToggleLanguage }: ProductsPag
         {activeProduct === 5 && (
           <section className="product-detail-panel" aria-labelledby="quality-red-paper-title">
             <div className="product-detail-image">
-              <img src={qualityRedPaper} alt={copy.qualityRedPaperImageAlt} />
+              <img
+                src={qualityRedPaper}
+                alt={copy.qualityRedPaperImageAlt}
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div className="product-detail-content">
               <header>
@@ -386,7 +406,7 @@ export default function ProductsPage({ language, onToggleLanguage }: ProductsPag
         {activeProduct === 6 && (
           <section className="product-detail-panel" aria-labelledby="radical-tape-title">
             <div className="product-detail-image">
-              <img src={radicalTape} alt={copy.radicalTapeImageAlt} />
+              <img src={radicalTape} alt={copy.radicalTapeImageAlt} loading="lazy" decoding="async" />
             </div>
             <div className="product-detail-content">
               <header>

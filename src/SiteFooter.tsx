@@ -1,4 +1,4 @@
-import radicalLogo from "../assets/radical-logo.png";
+import radicalLogo from "../assets/radical-logo.webp";
 import { translations, type Language } from "./translations";
 
 interface SiteFooterProps {
@@ -14,7 +14,7 @@ export default function SiteFooter({ language }: SiteFooterProps) {
       <div className="site-footer-inner">
         <div className="site-footer-brand">
           <a href="/#collection" aria-label={copy.brandHome}>
-            <img src={radicalLogo} alt="" />
+            <img src={radicalLogo} alt="" loading="lazy" decoding="async" />
           </a>
           <p>{copy.footerPromise}</p>
         </div>

@@ -1,5 +1,5 @@
 import type { FormEvent } from "react";
-import radicalLogo from "../assets/radical-logo.png";
+import radicalLogo from "../assets/radical-logo.webp";
 import { translations, type Language } from "./translations";
 
 interface ContactPageProps {
@@ -34,7 +34,7 @@ export default function ContactPage({ language, onToggleLanguage }: ContactPageP
     <main className="contact-page">
       <header className="contact-header">
         <a className="contact-brand" href="/#collection" aria-label={copy.brandHome}>
-          <img src={radicalLogo} alt="" />
+          <img src={radicalLogo} alt="" decoding="async" />
         </a>
         <nav className="contact-nav" aria-label={copy.navLabel}>
           <a href="/#collection">{copy.home}</a>

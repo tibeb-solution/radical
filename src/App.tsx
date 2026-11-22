@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import radicalLogo from "../assets/radical-logo.png";
-import exerciseBooks from "../assets/radical-exercise-books-cutout.png";
+import radicalLogo from "../assets/radical-logo.webp";
+import exerciseBooks from "../assets/radical-exercise-books-cutout.webp";
 import ContactPage from "./ContactPage";
 import ProductsPage from "./ProductsPage";
 import SiteFooter from "./SiteFooter";
@@ -69,7 +69,7 @@ export default function App() {
         <section className="product-landing" id="collection" aria-labelledby="hero-title">
           <header className="site-header">
             <a className="wordmark" href="#collection" aria-label={copy.brandHome}>
-              <img className="logo-image" src={radicalLogo} alt="" />
+              <img className="logo-image" src={radicalLogo} alt="" decoding="async" />
             </a>
             <nav className="main-nav" aria-label={copy.navLabel}>
               <a href="/#collection">{copy.home}</a>
@@ -112,7 +112,13 @@ export default function App() {
             </div>
 
             <figure className="hero-art">
-              <img className="hero-product" src={exerciseBooks} alt={copy.productAlt} />
+              <img
+                className="hero-product"
+                src={exerciseBooks}
+                alt={copy.productAlt}
+                fetchPriority="high"
+                decoding="async"
+              />
               <figcaption className="product-caption">
                 <span>{copy.productName}</span>
                 <span>{copy.productCaption}</span>
